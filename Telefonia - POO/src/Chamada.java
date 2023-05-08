@@ -3,7 +3,7 @@ import java.util.Date;
 public class Chamada {
 
 	private Date data;
-	  private int duracao;
+	private int duracao;
 
 
 	  public Chamada(Date data, int duracao){

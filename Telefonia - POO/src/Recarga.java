@@ -3,7 +3,7 @@ import java.util.Date;
 public class Recarga {
 
 	private Date data;
-	  private float valor;
+	private float valor;
 
 	  public Recarga(Date data, float valor){
 
