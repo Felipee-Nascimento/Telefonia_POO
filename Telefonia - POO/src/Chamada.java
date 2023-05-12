@@ -1,18 +1,18 @@
-import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.GregorianCalendar;
 
 public class Chamada {
 
-	private Date data;
+	private GregorianCalendar data;
 	private int duracao;
 
-
-	  public Chamada(Date data, int duracao){
+	  public Chamada(GregorianCalendar data, int duracao){
 
 	    this.data = data;
 	    this.duracao = duracao;
 	  }
 	  
-	  public Date getData(){
+	  public GregorianCalendar getData(){
 
 	    return data;
 	  }
@@ -26,7 +26,9 @@ public class Chamada {
 	   @Override
 	  public String toString(){
 
-	    return "Data: " + this.data + ", Duracao: " + this.duracao;
+		   SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+	       String formattedDate = dateFormat.format(data.getTime());
+
+	       return "Data: " + formattedDate + "\nDuração: " + duracao + " minutos";
 	  }
 }
-
