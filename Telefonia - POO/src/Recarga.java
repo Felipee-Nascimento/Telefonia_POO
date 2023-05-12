@@ -1,17 +1,19 @@
-import java.util.Date;
+
+import java.text.SimpleDateFormat;
+import java.util.GregorianCalendar;
 
 public class Recarga {
 
-	private Date data;
+	private GregorianCalendar data;
 	private float valor;
 
-	  public Recarga(Date data, float valor){
+	  public Recarga(GregorianCalendar data, float valor){
 
 	    this.data = data;
 	    this.valor = valor;
 	  }
 	  
-	  public Date getData() {
+	  public GregorianCalendar getData() {
 	    return data;
 	  }
 
@@ -21,8 +23,11 @@ public class Recarga {
 
 	  @Override
 	  public String toString(){
+		  
+		  SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+	       String formattedDate = dateFormat.format(data.getTime());
 
-	    return "Data: " + this.data + ", Valor: " + this.valor;
+	    return "Data: " + formattedDate + ", Valor: " + this.valor;
 	  }
 
 }
