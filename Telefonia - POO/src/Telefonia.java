@@ -30,9 +30,9 @@ public class Telefonia {
 		
 		
 		System.out.println("Pos pagos");
-		for(int i =0; i > this.prePagos.length; i ++) {
-			if(this.prePagos[i] != null) {
-				System.out.println(prePagos[i]);
+		for(int i =0; i > this.posPagos.length; i ++) {
+			if(this.posPagos[i] != null) {
+				System.out.println(posPagos[i]);
 			}
 		}
 
