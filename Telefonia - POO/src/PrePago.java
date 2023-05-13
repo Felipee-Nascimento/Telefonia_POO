@@ -6,11 +6,11 @@ public class PrePago extends Assinante{
 	 private int numRecargas;
 	 private float creditos;
 
-	public PrePago(long cpf, String nome, int numero, Recarga[] recargas, int numRecargas, float creditos) {
+	public PrePago(long cpf, String nome, int numero) {
 		super(cpf, nome, numero);
 		this.recargas = new Recarga[100];
-		this.numRecargas = numRecargas;
-		this.creditos = creditos;
+		this.numRecargas = 0;
+		this.creditos = 0f;
 	}
 	
 	public void fazerChamada(GregorianCalendar data, int duracao){
@@ -18,7 +18,7 @@ public class PrePago extends Assinante{
 		float valorMinuto = 1.45f; 
 		float valorChamada = valorMinuto*duracao; 
 		
-		if (chamadas.length>numChamadas && creditos>valorChamada) {
+		if (chamadas.length>numChamadas && creditos>=valorChamada) {
 			
 			Chamada chamada = new Chamada(data, duracao);
 			chamadas[numChamadas] = chamada;
@@ -48,7 +48,8 @@ public class PrePago extends Assinante{
 	}
 	
 	public void imprimirFatura(int mes) {
-		
+		//super(cpf, nome, numero);
+		System.out.println();
 		
 	}
 }
