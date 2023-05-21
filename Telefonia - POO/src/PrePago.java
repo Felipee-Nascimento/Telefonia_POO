@@ -47,8 +47,25 @@ public class PrePago extends Assinante{
 	
 	public void imprimirFatura(int mes) {
 		
-		System.out.println("CPF" + getCpf());
+		float totalFatura = 0;
 		
+		System.out.println("CPF: " + getCpf());
+		System.out.println("Nome: " + getNome());
+		System.out.println("Número: " + getNumero());
+		
+		Chamada[] c = chamadas;
+		for(int i=0;i<chamadas.length;i++) {
+			System.out.println("Data: "+c[i].getData());
+			System.out.println("Duracao: "+c[i].getDuracao());
+			float custoLigacao = c[i].getDuracao() * 1.45f; 
+			System.out.println("Custo: R$ "+custoLigacao);
+			totalFatura = totalFatura+custoLigacao;
+		}
+
+		System.out.println("Total da Fatura: R$ " + totalFatura);
+		System.out.println("Total de Recargas: "+this.numRecargas);
+		System.out.println("Creditos Disponiveis: "+this.creditos);
 	}
-	
+		
 }
+	
