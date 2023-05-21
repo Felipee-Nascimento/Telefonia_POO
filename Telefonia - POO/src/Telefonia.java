@@ -205,6 +205,7 @@ public class Telefonia {
 
 		System.out.print("Digite o mes desejado (1 a 12): ");
 		int mes = input.nextInt();
+		input.nextLine();
 
 		// Imprime as faturas dos assinantes pré-pagos
 		for (int i = 0; i < numPrePagos; i++) {
