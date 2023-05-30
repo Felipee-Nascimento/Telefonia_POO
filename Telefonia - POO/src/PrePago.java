@@ -53,19 +53,31 @@ public class PrePago extends Assinante{
 		System.out.println("Nome: " + getNome());
 		System.out.println("Número: " + getNumero());
 		
-		Chamada[] c = chamadas;
-		for(int i=0;i<chamadas.length;i++) {
-			System.out.println("Data: "+c[i].getData());
-			System.out.println("Duracao: "+c[i].getDuracao());
-			float custoLigacao = c[i].getDuracao() * 1.45f; 
-			System.out.println("Custo: R$ "+custoLigacao);
-			totalFatura = totalFatura+custoLigacao;
+		for(int i=0;i<this.numChamadas;i++) {
+			if (chamadas[i].getData().get(GregorianCalendar.MONTH) == (mes-1)) {
+				System.out.println("Data: "+chamadas[i].getData().getTime());
+				System.out.println("Duracao: "+chamadas[i].getDuracao());
+				float custoLigacao = chamadas[i].getDuracao() * 1.45f; 
+				System.out.println("Custo: R$ "+custoLigacao);
+				totalFatura = totalFatura+custoLigacao;
+			}
 		}
 
 		System.out.println("Total da Fatura: R$ " + totalFatura);
 		System.out.println("Total de Recargas: "+this.numRecargas);
 		System.out.println("Creditos Disponiveis: "+this.creditos);
 	}
+
+	@Override
+	public void fazerChamada() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void imprimirFatura() {
+		// TODO Auto-generated method stub
+		
+	}
 		
 }
-	
