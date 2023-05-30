@@ -1,4 +1,4 @@
-public class Assinante {
+public abstract class Assinante {
 	
     private long cpf;
     private String nome;
@@ -32,5 +32,9 @@ public class Assinante {
         return "CPF: " + this.cpf + ", Nome: " + this.nome + ", Numero: " + this.numero;
     }
 	
+	public abstract void fazerChamada();
+	
+	public abstract void imprimirFatura();
+
  
 }
