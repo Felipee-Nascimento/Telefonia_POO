@@ -1,3 +1,5 @@
+import java.util.GregorianCalendar;
+
 public abstract class Assinante {
 	
     private long cpf;
@@ -32,9 +34,9 @@ public abstract class Assinante {
         return "CPF: " + this.cpf + ", Nome: " + this.nome + ", Numero: " + this.numero;
     }
 	
-	public abstract void fazerChamada();
+	public abstract void fazerChamada(GregorianCalendar date, int duracao);
 	
-	public abstract void imprimirFatura();
+	public abstract void imprimirFatura(int mes);
 
  
 }
