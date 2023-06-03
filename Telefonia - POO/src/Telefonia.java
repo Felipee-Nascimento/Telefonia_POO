@@ -15,7 +15,7 @@ public class Telefonia {
 		this.assinante = new Assinante[20];
 	}
 
-	public void cadastrarAssinante() {
+	public void cadastrarAssinante(Assinante[] assinante) {
 
 		System.out.print("\n1 - PrePago");
 		System.out.print("\n2 - PosPago");
@@ -73,7 +73,7 @@ public class Telefonia {
 		}
 	}
 
-	public void fazerChamada(Assinante assinante)  {
+	public void fazerChamada(Assinante[] assinante)  {
 		
 		// solicita o tipo do assinante (pré-pago ou pós-pago)
 		System.out.println("Digite o tipo do assinante (pre ou pos):");
@@ -178,7 +178,7 @@ public class Telefonia {
 		}
 	}
 
-	public Assinante localizarAssinante(long cpf) {
+	private Assinante localizarAssinante(long cpf) {
 		for (int i = 0; i < numAssinantes; i++) {
 			if (assinante[i].getCpf() == cpf) {
 				return assinante[i];
@@ -227,16 +227,16 @@ public class Telefonia {
 
 			switch (opcao) {
 			case 1:
-				telefonia.cadastrarAssinante();
+				telefonia.cadastrarAssinante(assinante);
 				break;
 			case 2:
 				telefonia.listarAssinantes();
 				break;
 			case 3:
-				telefonia.fazerChamada();
+				telefonia.fazerChamada(assinante);
 				break;
 			case 4:
-				telefonia.fazerRecarga();
+				telefonia.fazerRecarga(prePago);
 				break;
 			case 5:
 				telefonia.imprimirFaturas();
