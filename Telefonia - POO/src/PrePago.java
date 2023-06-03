@@ -11,6 +11,7 @@ public class PrePago extends Assinante{
 		this.recargas = new Recarga[100];
 	}
 	
+	@Override
 	public void fazerChamada(GregorianCalendar date, int duracao){
 		
 		float valorMinuto = 1.45f; 
@@ -45,6 +46,7 @@ public class PrePago extends Assinante{
 		
 	}
 	
+	@Override
 	public void imprimirFatura(int mes) {
 		
 		float totalFatura = 0;
@@ -66,18 +68,6 @@ public class PrePago extends Assinante{
 		System.out.println("Total da Fatura: R$ " + totalFatura);
 		System.out.println("Total de Recargas: "+this.numRecargas);
 		System.out.println("Creditos Disponiveis: "+this.creditos);
-	}
-
-	@Override
-	public void fazerChamada() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void imprimirFatura() {
-		// TODO Auto-generated method stub
-		
 	}
 		
 }
