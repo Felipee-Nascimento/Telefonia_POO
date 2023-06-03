@@ -8,6 +8,7 @@ public class PosPago extends Assinante{
 		super(cpf, nome, numero);
 	}
 	
+	@Override
 	public void fazerChamada(GregorianCalendar date, int duracao) {
 		
 		float valorMinuto = 1.04f; 
@@ -51,16 +52,5 @@ public class PosPago extends Assinante{
 		
 	}
 
-	@Override
-	public void fazerChamada() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void imprimirFatura() {
-		// TODO Auto-generated method stub
-		
-	}
 
 }
