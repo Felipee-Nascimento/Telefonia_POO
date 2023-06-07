@@ -60,12 +60,12 @@ public class PrePago extends Assinante{
 				System.out.println("Data: "+chamadas[i].getData().getTime());
 				System.out.println("Duracao: "+chamadas[i].getDuracao());
 				float custoLigacao = chamadas[i].getDuracao() * 1.45f; 
-				System.out.println("Custo: R$ "+custoLigacao);
+				System.out.printf("Custo: R$ %.2f\n", custoLigacao);
 				totalFatura = totalFatura+custoLigacao;
 			}
 		}
 
-		System.out.println("Total da Fatura: R$ " + totalFatura);
+		System.out.printf("Total da Fatura: R$ %.2f\n", totalFatura);
 		System.out.println("Total de Recargas: "+this.numRecargas);
 		System.out.println("Creditos Disponiveis: "+this.creditos);
 	}
