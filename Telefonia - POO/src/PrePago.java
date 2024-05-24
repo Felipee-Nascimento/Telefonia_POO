@@ -42,8 +42,7 @@ public class PrePago extends Assinante{
 		}
 		else {
 			System.out.println("Não foi possível realizar a recarga!");
-		}
-		
+		}	
 	}
 	
 	@Override
@@ -68,6 +67,5 @@ public class PrePago extends Assinante{
 		System.out.printf("Total da Fatura: R$ %.2f\n", totalFatura);
 		System.out.println("Total de Recargas: "+this.numRecargas);
 		System.out.println("Creditos Disponiveis: "+this.creditos);
-	}
-		
+	}		
 }
